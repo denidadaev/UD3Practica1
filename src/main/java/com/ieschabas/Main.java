@@ -3,13 +3,12 @@ package com.ieschabas;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random rng = new Random();
 
-        System.out.println("=== PRUEBA DE 10 EJERCICIOS ===\n");
+        System.out.println("=== PRUEBA DE 10 EJERCICIOS ===");
 
         // EJERCICIO 1: MenuVehiculos (INTERACTIVO)
         System.out.println("1. EJERCICIO MENU VEHICULOS");
@@ -24,52 +23,17 @@ public class Main {
         // EJERCICIO 3: JuegoAdivinar (SIN ERROR - 1-100 GARANTIZADO)
         System.out.println("3. EJERCICIO JUEGO ADIVINAR");
         System.out.println("=== JUEGO ADIVINAR EL NÚMERO ===");
+        Random random = new Random();
+        int secreto = random.nextInt(10);
+        int[] intentos = {0};
+        JuegoAdivinar juego = new JuegoAdivinar();
+        int resultado1 = juego.jugar(secreto, intentos);
 
-        // NÚMERO SECRETO (1-100)
-        int secreto = (int) (Math.random() * 100) + 1;
-        System.out.println("🔒 Adivina el número secreto (1-100)\n");
-
-        // TÚ INTRODUCES INTENTOS EN TIEMPO REAL
-        java.util.ArrayList<Integer> listaIntentos = new java.util.ArrayList<>();
-
-        System.out.println("Introduce tus intentos (0 para terminar):");
-
-        while (true) {
-            System.out.print("Intento " + (listaIntentos.size() + 1) + ": ");
-            int intento = scanner.nextInt();
-
-            if (intento == 0) {
-                System.out.println("¡Juego terminado!\n");
-                break;
-            }
-
-            // **AQUÍ**: MUESTRA "MAYOR O MENOR" EN CADA INTENTO
-            if (intento < secreto) {
-                System.out.println("  → El número es mayor");
-            } else if (intento > secreto) {
-                System.out.println("  → El número es menor");
-            } else if (intento == secreto) {
-                System.out.println("  → ¡ACERTASTE!");
-            } else if (intento == 0){
-                System.out.println("Te rendiste. El número secreto era: " + secreto);
-                break;
-            }
-
-
-            // CONVERTIR A ARRAY PARA MÉTODO
-            int[] intentos = new int[listaIntentos.size()];
-            for (int i = 0; i < listaIntentos.size(); i++) {
-                intentos[i] = listaIntentos.get(i);
-            }
-
-            System.out.println("Intentos realizados: " + Arrays.toString(intentos));
-
-            // EJECUTAR MÉTODO
-            int resultado = JuegoAdivinar.jugar(secreto, intentos);
-            System.out.println("Resultado oficial: " + (resultado > 0 ?
-                    "¡ACERTASTE en el intento " + resultado + "!" : "No acertaste"));
-            System.out.println();
-
+        if (resultado1 == 0) {
+            System.out.println("Te rendiste. El número secreto era: " + secreto);
+        } else if (resultado1 == secreto) {
+            System.out.println("Ganaste, yuju. El número era: " + secreto);
+        }
             // Ejercicio 4: AleatoriosPar
             System.out.println("4. EJERCICIO ALEATORIOS PAR");
             int par = AleatoriosPar.parAleatorioMenorQue(20, rng);
@@ -78,8 +42,8 @@ public class Main {
 
             // Ejercicio 5: SumasAleatorias
             System.out.println("5. EJERCICIO SUMAS ALEATORIAS");
-            int[] sumas = SumasAleatorias.generarSumas(3, rng);
-            System.out.println("Primeras 3 sumas: " + Arrays.toString(sumas));
+            int[] sumas = SumasAleatorias.generarSumas(20, rng);
+            System.out.println("Las 20 sumas: " + Arrays.toString(sumas));
             System.out.println();
 
             // Ejercicio 6: Circunferencia
@@ -120,5 +84,4 @@ public class Main {
 
             scanner.close();
         }
-    }
 }

@@ -1,32 +1,41 @@
 package com.ieschabas;
 
+import java.util.Scanner;
+
 public class JuegoAdivinar {
 
-    // MÉTODO 1: ESPECIFICACIÓN EXACTA (NO STATIC + int[] intentos)
     public void evaluarIntento(int secreto, int intento, int[] intentos) {
-        int n = intentos.length; // n = número de intentos TOTALES en el array
+        intentos[0]++;
 
         if (intento < secreto) {
-            System.out.println("El número es menor. Has realizado " + n + " intentos");
+            System.out.println("El número es mayor. Has realizado " + intentos[0] + " intentos");
         } else if (intento > secreto) {
-            System.out.println("El número es mayor. Has realizado " + n + " intentos");
-        } else {
+            System.out.println("El número es menor. Has realizado " + intentos[0] + " intentos");
+        } else if (secreto == intento) {
             System.out.println("Has acertado!");
+        } else if (intento == 0) {
+            System.out.println("Te rendiste");
         }
     }
 
-    // MÉTODO 2: ESPECIFICACIÓN EXACTA (STATIC)
-    public static int jugar(int secreto, int[] intentos) {
-        JuegoAdivinar juego = new JuegoAdivinar();
-        int contador = 0;
 
-        for (int intento : intentos) {
-            juego.evaluarIntento(secreto, intento, intentos);
-            contador++;
-            if (intento == secreto) {
-                return contador;
+    public int jugar(int secreto, int[] intentos) {
+        Scanner scanner = new Scanner(System.in);
+        int intento;
+        while (true) {
+            System.out.println("Introduce el intento");
+            intento = scanner.nextInt();
+
+            if (intento < secreto) {
+                return -1;
             }
+
+            evaluarIntento(secreto, intento, intentos);
+
+            if (secreto == intento) {
+                return intentos[0];
+            }
+
         }
-        return -1; // No se acertó
     }
 }
