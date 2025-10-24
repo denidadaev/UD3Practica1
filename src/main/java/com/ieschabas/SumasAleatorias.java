@@ -2,7 +2,11 @@ package com.ieschabas;
 
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * @author Deni Dadaev
+ * @version 1.0
+ * Creada la clse que escribe un algoritmo que devuelva la suma de dos enteros aleatorios (entre 0 y 1000), repetirlo 20 veces
+ */
 public class SumasAleatorias {
     public static int sumaDosAleatorios(Random rng) {
         int num1 = rng.nextInt(1001);

@@ -2,7 +2,9 @@ package com.ieschabas;
 import java.util.Scanner;
 
 /**
- * author Deni Dadaev
+ * @author Deni Dadaev
+ * @version 1.0
+ * Creada la clase que realiza un menú para una aplicación de mantenimiento de vehículos
  */
 public class MenuVehiculos {
     public static String seleccionarOpcion(int opcion) {

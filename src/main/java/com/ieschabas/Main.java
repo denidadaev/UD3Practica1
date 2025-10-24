@@ -62,25 +62,16 @@ public class Main {
 
             // Ejercicio 8: MayoresAleatorios3
             System.out.println("8. EJERCICIO MAYORES 3 ALEATORIOS");
-            int[] maximos3 = MayoresAleatorios3.generarMaximos3(3, rng);
+            int[] maximos3 = MayoresAleatorios3.generarMaximos3(20, rng);
             System.out.println("Primeros 3 máximos de 3 nums: " + Arrays.toString(maximos3));
             System.out.println();
 
             // Ejercicio 9: MayoresAleatorios4
             System.out.println("9. EJERCICIO MAYORES 4 ALEATORIOS");
-            int[] maximos4 = MayoresAleatorios4.generarMaximos4(3, rng);
+            int[] maximos4 = MayoresAleatorios4.generarMaximos4(20, rng);
             System.out.println("Primeros 3 máximos de 4 nums: " + Arrays.toString(maximos4));
             System.out.println();
 
-            // Ejercicio 10: ImprimirCaracteres
-            System.out.println("10. EJERCICIO IMPRIMIR CARACTERES");
-            System.out.println("Repetir 'x' 5 veces: " +
-                    ImprimirCaracteres.repetirCaracter('x', 5));
-
-            String salidaAbc = ImprimirCaracteres.construirSalidaAbecedario(
-                    ImprimirCaracteres.generarRepeticionesAbecedario(rng));
-            System.out.println("Abecedario aleatorio (primeros 20 chars): " +
-                    salidaAbc.substring(0, Math.min(20, salidaAbc.length())));
 
             scanner.close();
         }

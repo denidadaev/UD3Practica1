@@ -3,7 +3,11 @@ package com.ieschabas;
 import java.util.Random;
 import java.util.Scanner;
 
-
+/**
+ * @author Deni Dadaev
+ * @version 1.0
+ * Creada la clase que escribe un algoritmo que devuelva el mayor de tres números aleatorios (entre 0 y 1000), y lo repite 20 veces
+ */
 public class MayoresAleatorios3 {
     public static int max3(int a, int b, int c) {
         int max = a;

@@ -1,7 +1,11 @@
 package com.ieschabas;
 
 import java.util.Scanner;
-
+/**
+ * @author Deni Dadaev
+ * @version 1.0
+ * Crada la clase pde un juego para adivinar un número
+ */
 public class JuegoAdivinar {
 
     public void evaluarIntento(int secreto, int intento, int[] intentos) {

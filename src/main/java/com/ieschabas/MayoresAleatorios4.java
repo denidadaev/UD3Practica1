@@ -2,7 +2,11 @@ package com.ieschabas;
 
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * @author Deni Dadaev
+ * @version 1.0
+ * Creada la clase que diseña un algoritmo que devuelva el mayor de cuatro números aleatorios (entre 0 y 1000), y lo repite 20 veces
+ */
 public class MayoresAleatorios4 {
     public static int max4(int a, int b, int c, int d) {
         int max = a;

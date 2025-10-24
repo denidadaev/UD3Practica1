@@ -2,7 +2,11 @@ package com.ieschabas;
 
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * @author Deni Dadaev
+ * @version 1.0
+ * Creada la clase que obtiene un número par aleatorio menor que el que el usuario introduzca
+ */
 public class AleatoriosPar {
     public static int parAleatorioMenorQue(int limite, Random rng) {
         Scanner scanner = new Scanner(System.in);

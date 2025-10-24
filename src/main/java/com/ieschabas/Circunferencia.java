@@ -1,7 +1,11 @@
 package com.ieschabas;
 
 import java.util.Scanner;
-
+/**
+ * @author Deni Dadaev
+ * @version 1.0
+ * Creada la clase que calcula el área y la longitud de una circunferencia en función del radi
+ */
 public class Circunferencia {
     public static double area(double radio) {
         Scanner scanner = new Scanner(System.in);
