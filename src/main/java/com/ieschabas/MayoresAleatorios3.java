@@ -16,6 +16,11 @@ public class MayoresAleatorios3 {
         return max;
     }
 
+    /**Método  que me comprueba que el número obtenido no sea negativo
+     * @param repeticiones
+     * @param rng
+     * @return
+     */
     public static int[] generarMaximos3(int repeticiones, Random rng) {
         Scanner scanner = new Scanner(System.in);
 

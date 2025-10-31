@@ -10,7 +10,9 @@ import java.util.Scanner;
 public class AleatoriosPar {
     public static int parAleatorioMenorQue(int limite, Random rng) {
         Scanner scanner = new Scanner(System.in);
-
+        /**Método que introduce si el número introducido es mneor que el 0
+         *
+         */
         while (limite <= 0) {
             System.out.println("El límite no puede ser un número negativo");
             System.out.print("Introduce un nuevo límite: ");

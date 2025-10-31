@@ -14,6 +14,12 @@ public class SumasAleatorias {
         return num1 + num2;
     }
 
+    /**Método que hace las 20 repeticiones de la suma de los números random
+     *
+     * @param repeticiones
+     * @param rng
+     * @return
+     */
     public static int[] generarSumas(int repeticiones, Random rng) {
         Scanner scanner = new Scanner(System.in);
 

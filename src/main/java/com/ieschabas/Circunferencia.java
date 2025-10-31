@@ -9,7 +9,9 @@ import java.util.Scanner;
 public class Circunferencia {
     public static double area(double radio) {
         Scanner scanner = new Scanner(System.in);
-
+        /**Método que introduce el radio del circunferencia
+         *
+         */
         while (radio < 0) {
             System.out.println("El radio no puede ser un número negativo");
             System.out.print("Introduce un nuevo radio: ");
@@ -19,6 +21,11 @@ public class Circunferencia {
         return Math.PI * radio * radio;
     }
 
+    /**Método que calcula la longitud apartir del radio introducido
+     *
+     * @param radio
+     * @return
+     */
     public static double longitud(double radio) {
         Scanner scanner = new Scanner(System.in);
 

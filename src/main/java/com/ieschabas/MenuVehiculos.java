@@ -6,6 +6,10 @@ import java.util.Scanner;
  * @version 1.0
  * Creada la clase que realiza un menú para una aplicación de mantenimiento de vehículos
  */
+
+/** Método que demuestra la lista de opciones
+ *
+ */
 public class MenuVehiculos {
     public static String seleccionarOpcion(int opcion) {
         switch (opcion) {
@@ -21,6 +25,10 @@ public class MenuVehiculos {
                 return "La opción no existe. Vuelve a intentarlo";
         }
     }
+
+    /** Métdoo que me saca el menú
+     *
+     */
     public static void mostrarMenuInteractivo() {
         Scanner scanner = new Scanner(System.in);
         int opcion;
